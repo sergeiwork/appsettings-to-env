@@ -27,8 +27,17 @@
     </head>
     <body>
         <div class="container">
-            <textarea id="input" class="form-control mb-3" rows="15"></textarea>
+            <p class="h1">Convert appsettings json to env</p>
+            <textarea id="input" class="form-control mb-3" rows="15">
+{
+    "ConnectionStrings": {
+        "DefaultConnection": "Database=master;Server=(local);Integrated Security=SSPI;"
+    },
+    "property": "value"
+}
+            </textarea>
             <button class="btn btn-success" onClick="convert()">Convert</button>
+            <hr>
             <textarea class="form-control mb-3" rows="15" readonly id="output"> </textarea>
         </div>
     </body>

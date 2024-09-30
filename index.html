@@ -6,7 +6,8 @@
             {
                 for(const [key, value] of Object.entries(obj))
                 {
-                    let currentPath = path === null ? key : `${path}__${key}`
+                    let filteredKey = key.replaceAll(':', '__')
+                    let currentPath = path === null ? filteredKey : `${path}__${filteredKey}`
                     console.log(currentPath)
                     if (typeof value == "object" && value !== null)
                         for(var v of getValues(value, currentPath))
